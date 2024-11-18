@@ -1,0 +1,11 @@
+{
+  "signup": "Sign up for Blog Platform",
+  "create": "Create your account to start blogging",
+  "name": "Name",
+  "email": "Email",
+  "password": "Password",
+  "cPassword": "Confirm password",
+  "signupBtn": "Sign up",
+  "acc": "Already have an acccount?",
+  "login": "Log in"
+}
