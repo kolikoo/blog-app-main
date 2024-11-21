@@ -7,6 +7,7 @@ export default defineConfig(() => {
   const srcPath = `${rootPath}/src`;
   const componentsPath = `${srcPath}/components`;
   const pagesPath = `${srcPath}/pages`;
+  const assetPath = `${srcPath}/assets`;
 
   return {
     plugins: [react()],
@@ -16,6 +17,7 @@ export default defineConfig(() => {
         "@": srcPath,
         "&": componentsPath,
         "#": pagesPath,
+        "!": assetPath,
       },
     },
   };

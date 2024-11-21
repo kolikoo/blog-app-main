@@ -1,0 +1,28 @@
+{
+  "about_title": "About Blogs Platform",
+  "about_subtitle": "Empowering tech enthusiasts to share knowledge and inspire innovation.",
+  "mission_title": "Our Mission",
+  "mission_description": "At bitBlogs, we believe in the power of shared knowledge. Our mission is to create a platform where tech enthusiasts, developers, and innovators can come together to share ideas, learn from each other, and push the boundaries of what's possible in the world of technology.",
+  "story_title": "Our Story",
+  "story_paragraph": "Founded in 2023, bitBlogs started as a small project by a group of passionate developers who wanted to create a space for sharing their experiences and learning from others. What began as a simple blog quickly grew into a thriving community of tech enthusiasts from all around the world. Today, bitBlogs is proud to be a leading platform for technology-focused content, fostering innovation and collaboration in the ever-evolving world of tech.",
+  "join_us_title": "Join Us on Our Journey",
+  "get_started_button": "Get started Today",
+  "offers": {
+    "Rich Content": {
+      "title": "Rich Content",
+      "description": "Dive into a variety of articles, tutorials, case studies, and more, all created to inspire and educate."
+    },
+    "Vibrant Community": {
+      "title": "Vibrant Community",
+      "description": "Join a global community of tech enthusiasts, developers, and innovators who share ideas, collaborate, and learn from each other."
+    },
+    "Cutting-edge Topics": {
+      "title": "Cutting-edge Topics",
+      "description": "Stay ahead of the curve with content on the latest trends, technologies, and breakthroughs in the tech industry."
+    },
+    "Collaborative Learning": {
+      "title": "Collaborative Learning",
+      "description": "Engage in collaborative projects, discussions, and workshops that help foster deeper understanding and skill development."
+    }
+  }
+}

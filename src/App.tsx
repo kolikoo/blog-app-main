@@ -5,12 +5,14 @@ import NotFound from "#/notFound";
 import Loading from "&/base/loading";
 import AuthPageView from "#/auth/views";
 import Registration from "#/registration/views";
+import AboutView from "#/about/views";
+import AuthorView from "#/author/views/AuthorView";
 const HomePageView = lazy(() => import("./pages/home/views"));
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 const App: React.FC = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="w-screen h-screen  flex flex-col">
+      <div className="w-screen h-screen  flex flex-col overflow-x-hidden">
         <BrowserRouter
           future={{
             v7_relativeSplatPath: true,
@@ -29,6 +31,8 @@ const App: React.FC = () => {
               />
               <Route path="login" element={<AuthPageView />} />
               <Route path="register" element={<Registration />} />
+              <Route path="about" element={<AboutView />} />
+              <Route path="author/:id" element={<AuthorView />} />
             </Route>
             <Route path="/" element={<Navigate to="/ka/home" />} />
             <Route path="*" element={<NotFound />} />

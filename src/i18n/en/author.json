@@ -1,0 +1,44 @@
+{
+  "authors": {
+    "F. Scott Fitzgerald": {
+      "author": "F. Scott Fitzgerald",
+      "profession": "Novelist",
+      "professionDescription": "A novelist known for his iconic work, *The Great Gatsby*, and his portrayal of the Jazz Age in America.",
+      "followers": 200000,
+      "following": 500,
+      "biography": "Francis Scott Key Fitzgerald (1896–1940) was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century. His work explores themes of wealth, excess, love, and the American Dream. Despite early success, Fitzgerald faced financial struggles and personal difficulties later in life."
+    },
+    "Harper Lee": {
+      "author": "Harper Lee",
+      "profession": "Novelist",
+      "professionDescription": "Best known for her Pulitzer Prize-winning novel *To Kill a Mockingbird*, which deals with serious themes such as racism and injustice.",
+      "followers": 150000,
+      "following": 400,
+      "biography": "Harper Lee (1926–2016) was an American novelist who achieved worldwide fame with the publication of *To Kill a Mockingbird* in 1960. The novel, set in the 1930s South, deals with deep themes of racial injustice and moral growth. Lee lived a largely private life, publishing only this single novel during her career."
+    },
+    "George Orwell": {
+      "author": "George Orwell",
+      "profession": "Journalist, Novelist",
+      "professionDescription": "An influential journalist and novelist, Orwell is famous for his works *1984* and *Animal Farm*, which criticize totalitarian regimes and social injustice.",
+      "followers": 250000,
+      "following": 600,
+      "biography": "George Orwell (1903–1950) was an English novelist, essayist, and journalist known for his criticism of totalitarianism and social injustice. His works, such as *1984* and *Animal Farm*, have become essential texts in political literature, exploring themes of surveillance, oppression, and the manipulation of truth."
+    },
+    "Jane Austen": {
+      "author": "Jane Austen",
+      "profession": "Novelist",
+      "professionDescription": "A prominent English novelist known for her keen observations of social class and relationships in works like *Pride and Prejudice* and *Sense and Sensibility*.",
+      "followers": 300000,
+      "following": 450,
+      "biography": "Jane Austen (1775–1817) was an English novelist who achieved success with her sharp social commentary and biting wit. Her novels focus on themes of marriage, morality, and social class, with works such as *Pride and Prejudice*, *Emma*, and *Sense and Sensibility* remaining popular and influential today."
+    },
+    "Herman Melville": {
+      "author": "Herman Melville",
+      "profession": "Novelist",
+      "professionDescription": "Famous for his novel *Moby-Dick*, Melville is a key figure in American literature, exploring complex themes like obsession, fate, and the human condition.",
+      "followers": 180000,
+      "following": 350,
+      "biography": "Herman Melville (1819–1891) was an American novelist, poet, and short story writer. His magnum opus, *Moby-Dick*, is considered one of the greatest works of American literature. Melville’s work explores deep philosophical themes, and he is known for his complex narratives and deep symbolism."
+    }
+  }
+}
