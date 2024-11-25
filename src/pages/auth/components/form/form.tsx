@@ -1,13 +1,15 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import useCurrentLang from "@/i18n/currentLang";
 import { useMutation } from "@tanstack/react-query";
 import { login } from "@/supabase/auth";
 import { useState } from "react";
+
 const AuthForm: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const currentLang = useCurrentLang();
   const [loginPayload, setLoginPayload] = useState({
     email: "",
@@ -23,8 +25,10 @@ const AuthForm: React.FC = () => {
   const { mutate: handleLogin } = useMutation({
     mutationKey: ["login"],
     mutationFn: login,
+    onSuccess: () => {
+      navigate(`/${currentLang}/home`);
+    },
   });
-
   const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!!loginPayload.email && !!loginPayload.password) {

@@ -10,12 +10,27 @@ export const register = ({
   return supabase.auth.signUp({ email, password });
 };
 
-export const login = ({
+export const login = async ({
   email,
   password,
 }: {
   email: string;
   password: string;
 }) => {
-  return supabase.auth.signInWithPassword({ email, password });
+  try {
+    const res = await supabase.auth.signInWithPassword({ email, password });
+
+    if (res.error) {
+      throw res.error;
+    }
+
+    return res;
+  } catch (error) {
+    console.log("Login failed");
+    throw error;
+  }
+};
+
+export const logout = () => {
+  return supabase.auth.signOut();
 };

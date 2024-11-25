@@ -33,6 +33,21 @@ export type AuthorProp =
 export interface AboutDetailProps {
   author: AuthorProp;
 }
+interface ProfileData {
+  avatar_url: string | null;
+  id: string;
+  name_en: string | null;
+  name_ka: string | null;
+  phone: string | null;
+  surname_en: string | null;
+  surname_ka: string | null;
+  updated_at: string | null;
+  username: string | null;
+}
+
+export interface MainInfoProps {
+  data: ProfileData[] | null | undefined;
+}
 export const data = [
   { id: "1", title: "theGreatGatsby" },
   { id: "2", title: "toKillAMockingbird" },
