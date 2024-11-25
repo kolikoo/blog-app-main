@@ -1,4 +1,4 @@
-import AuthForm from "#/auth/components/form";
+import AuthForm from "../components/form";
 const AuthPageView: React.FC = () => {
   return (
     <div className="flex justify-center items-center">

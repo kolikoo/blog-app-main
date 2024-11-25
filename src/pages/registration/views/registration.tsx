@@ -1,4 +1,4 @@
-import RegistrationForm from "#/registration/components/form";
+import RegistrationForm from "../components/form";
 const Registration: React.FC = () => {
   return (
     <div className="flex justify-center items-center">

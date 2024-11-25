@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import AboutAuthor from "#/author/components/aboutAuthor";
-import Articles from "#/author/components/articles";
+import AboutAuthor from "../components/aboutAuthor";
+import Articles from "../components/articles";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslatedData } from "@/i18n/translatedData";
 import { useTranslatedDataAuthor } from "@/i18n/trasnaltedDataAuthor";

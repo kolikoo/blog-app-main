@@ -1,6 +1,6 @@
-import Form from "#/profile/component/form";
-import MainInfo from "#/profile/component/mainInfo";
-import Info from "#/profile/component/additionalInfo";
+import Form from "../component/form";
+import MainInfo from "../component/mainInfo";
+import Info from "../component/additionalInfo";
 import { loginAtom } from "@/store";
 import { getProfile } from "@/supabase/account";
 import { useQuery } from "@tanstack/react-query";

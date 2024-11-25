@@ -1,5 +1,5 @@
-import Blogs from "#/home/components/blogs";
-import Author from "#/home/components/authors";
+import Blogs from "../components/blogs";
+import Author from "../components/authors";
 import { useTranslatedData } from "@/i18n/translatedData";
 
 const HomePageView: React.FC = () => {
