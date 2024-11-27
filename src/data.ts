@@ -11,6 +11,11 @@ export interface Item {
 export interface BlogsProps {
   data: Item[];
 }
+
+export interface LoginForm {
+  email: string;
+  password: string;
+}
 export interface Author {
   id: string;
   author: string;
@@ -45,6 +50,17 @@ interface ProfileData {
   username: string | null;
 }
 
+export interface ProfileForm {
+  username: string;
+  name_ka: string;
+  name_en: string;
+  surname_ka: string;
+  surname_en: string;
+  phone: string;
+  avatar_url: string;
+}
+
+
 export interface MainInfoProps {
   data: ProfileData[] | null | undefined;
 }
@@ -62,6 +78,11 @@ export const offers = [
   { title: "Cutting-edge Topics", img: innovate },
   { title: "Collaborative Learning", img: learning },
 ];
+
+export interface LoginForm {
+  email: string;
+  password: string;
+}
 
 export const authorDetailed = [
   { id: "1", title: "F. Scott Fitzgerald" },
