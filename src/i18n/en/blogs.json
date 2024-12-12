@@ -1,0 +1,9 @@
+{
+  "mainTitle": "Add Blog",
+  "title_ka": "Title in Georgian",
+  "title_en": "Title in English",
+  "description_ka": "Description in Georgian",
+  "description_en": "Description in English",
+  "image_url": "Image",
+  "create_button": "CREATE"
+}

@@ -1,0 +1,7 @@
+{
+  "title_ka": "Title must be at least 3 characters",
+  "title_en": "Title must be at least 3 characters",
+  "description_ka": "Description must be at least 15 characters",
+  "description_en": "Description must be at least 15 characters",
+  "image_url": "Please add image"
+}

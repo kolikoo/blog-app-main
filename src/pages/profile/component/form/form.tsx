@@ -8,7 +8,7 @@ import { loginAtom } from "@/store";
 import { useAtomValue } from "jotai";
 import { useQueryClient } from "@tanstack/react-query";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { ProfileForm } from "../../../../data";
+import { ProfileForm } from "@/data";
 const Form: React.FC = () => {
   const queryClient = useQueryClient();
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ const Form: React.FC = () => {
         queryKey: ["profile-info"],
       });
     },
-    
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onError: (error: any) => {
       if (error.message === "Username is already taken") {
         setErrorMessage("Username is already taken");

@@ -14,6 +14,7 @@
     "gen-supabase-types": "npx supabase gen types --lang=typescript --project-id sptcaizwcyzdwsrbhjoh --schema public > src/supabase/database.types.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
@@ -31,16 +32,20 @@
     "i18next-browser-languagedetector": "^8.0.0",
     "jotai": "^2.10.3",
     "lucide-react": "^0.460.0",
+    "qs": "^6.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.2",
     "react-i18next": "^15.1.1",
+    "react-icons": "^5.4.0",
     "react-router-dom": "^6.28.0",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@types/qs": "^6.9.17",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",

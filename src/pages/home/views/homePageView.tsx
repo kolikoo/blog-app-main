@@ -1,18 +1,18 @@
-import Blogs from "../components/blogs";
-import Author from "../components/authors";
-import { useTranslatedData } from "@/i18n/translatedData";
+import Blogs from "../components/blogs/index";
+// import Author from "#/home/components/authors";
+// import { useTranslatedData } from "@/i18n/translatedData";
 
 const HomePageView: React.FC = () => {
-  const translatedData = useTranslatedData();
-  const authors = translatedData.map((author) => ({
-    id: author.id,
-    author: author.author,
-  }));
+  // const translatedData = useTranslatedData();
+  // const authors = translatedData.map((author) => ({
+  //   id: author.id,
+  //   author: author.author,
+  // }));
 
   return (
-    <div className="flex justify-center items-start">
-      <Blogs data={translatedData} />
-      <Author authors={authors} />
+    <div className="flex justify-center items-center">
+      <Blogs />
+      {/* <Author authors={authors} /> */}
     </div>
   );
 };

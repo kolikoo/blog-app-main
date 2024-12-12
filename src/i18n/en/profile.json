@@ -1,0 +1,23 @@
+{
+  "info": "Add info",
+  "username": "Username",
+  "name": "Name",
+  "surname": "Surname",
+  "avatar": "Avatar",
+  "phone": "Phone number",
+  "save": "Save",
+  "edit": "Edit Info",
+  "tableTitle": "User Information",
+  "editClose": "Close Form",
+  "usernameRequired": "Username is required.",
+  "userMinLength": "Username must be at least 4 characters long.",
+  "userMaxLength": "Username cannot be longer than 20 characters.",
+  "nameReq": "Name is required.",
+  "nameMinLength": "Name must be at least 3 characters long.",
+  "nameMaxLength": "Name cannot be longer than 10 characters.",
+  "surnameReq": "Surname is required.",
+  "surnameMinLength": "Surname must be at least 4 characters long.",
+  "surnameMaxLength": "Surname cannot be longer than 15 characters.",
+  "phoneReq": "Phone number is required.",
+  "phoneExactLength": "Phone number must be exactly 9 digits long."
+}

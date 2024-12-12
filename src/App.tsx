@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { ThemeProvider } from "&/theme/theme-provider";
 import Layout from "&/layout";
 import NotFound from "../src/pages/notFound";
@@ -15,11 +15,14 @@ import { supabase } from "./supabase";
 import AuthRegisterGuard from "./components/guard/index";
 import ProfileGuard from "../src/components/guard/profileGuard";
 import ProfileView from "../src/pages/profile/view";
+import CreteBlogsView from "./pages/write/views";
 const App: React.FC = () => {
   const setUser = useSetAtom(loginAtom);
+  const [isLoading, setisLoading] = useState(true);
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session);
+      setisLoading(false);
     });
 
     const {
@@ -30,7 +33,9 @@ const App: React.FC = () => {
 
     return () => subscription.unsubscribe();
   }, [setUser]);
-
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="w-screen h-screen  flex flex-col overflow-x-hidden">
@@ -75,6 +80,7 @@ const App: React.FC = () => {
                   </ProfileGuard>
                 }
               ></Route>
+              <Route path="write" element={<CreteBlogsView />} />
               <Route path="author/:id" element={<AuthorView />} />
             </Route>
             <Route path="/" element={<Navigate to="/ka/home" />} />
