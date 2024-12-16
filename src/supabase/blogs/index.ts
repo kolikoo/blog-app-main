@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from "..";
-import { queryClient } from "@/main";
 export const addBlog = async ({
   payload,
   user,
@@ -26,7 +25,6 @@ export const addBlog = async ({
       throw new Error(insertRes.error.message);
     }
     console.log("Successfully created", insertRes);
-    queryClient.invalidateQueries({ queryKey: ["blog-list"] });
   } catch (error) {
     console.error("Error creating blog:", error);
   }
@@ -39,13 +37,13 @@ export const getBlogs = async ({
   search: string;
   currentlang: string;
 }) => {
-  const { data } = await supabase
-    .from("blogs")
-    .select("*")
-    .ilike(`${currentlang === "ka" ? "title_ka" : "title_en"}`, `%${search}%`)
-    .throwOnError();
+  const query = supabase.from("blogs").select("*");
+  if (search && search.length > 2) {
+    query.ilike(
+      `${currentlang === "ka" ? "title_ka" : "title_en"}`,
+      `%${search}%`
+    );
+  }
+  const { data } = await query.throwOnError();
   return data;
 };
-
-
-// blogs index.ts

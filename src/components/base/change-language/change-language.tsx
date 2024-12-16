@@ -7,23 +7,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function ChangeLanguage() {
-  const changeLanguageToKa = () => {
-    i18n.changeLanguage("ka");
-    window.history.pushState(
-      null,
-      "",
-      "/ka" + window.location.pathname.substring(3),
-    );
-  };
-  const changeLanguageToEn = () => {
-    i18n.changeLanguage("en");
-    window.history.pushState(
-      null,
-      "",
-      "/en" + window.location.pathname.substring(3),
-    );
+  const location = useLocation();
+  const navigate = useNavigate();
+  const changeLanguage = (lang: string) => {
+    const currentParams = new URLSearchParams(location.search);
+    const newPath = `/${lang}${location.pathname.substring(3)}`;
+    const newSearch = currentParams.toString();
+
+    i18n.changeLanguage(lang);
+    navigate(`${newPath}?${newSearch}`, { replace: true });
   };
 
   return (
@@ -34,10 +29,10 @@ export function ChangeLanguage() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={changeLanguageToEn}>
+        <DropdownMenuItem onClick={() => changeLanguage("en")}>
           English
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={changeLanguageToKa}>
+        <DropdownMenuItem onClick={() => changeLanguage("ka")}>
           ქართული
         </DropdownMenuItem>
       </DropdownMenuContent>

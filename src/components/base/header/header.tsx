@@ -27,9 +27,9 @@ const Header: React.FC = () => {
     logOut();
   };
   return (
-    <header className="w-full h-20 sticky top-0 bg-slate-700 flex items-center justify-between px-16 py-6 z-10">
-      <h1 className="text-2xl font-semibold uppercase">
-        {t("header.blogTitle")}
+    <header className="w-full h-20 sticky top-0 bg-slate-400  flex items-center justify-between px-16 py-6 z-10 dark:bg-yellow-600">
+      <h1 className="text-2xl font-semibold uppercase text-yellow-400">
+        Blogs
       </h1>
       <div className="flex gap-6 text-yellow-300">
         <NavLink to={`/${currentLang}/home`} className="uppercase">

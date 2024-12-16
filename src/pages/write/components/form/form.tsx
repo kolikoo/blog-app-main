@@ -13,7 +13,9 @@ import { addBlog } from "@/supabase/blogs";
 import { useNavigate } from "react-router-dom";
 import useCurrentLang from "@/i18n/currentLang";
 import { Textarea } from "@/components/ui/textarea";
+import { useQueryClient } from "@tanstack/react-query";
 const CreateForm: React.FC = () => {
+  const queryClient = useQueryClient();
   const { t } = useTranslation();
   const user = useAtomValue(loginAtom);
   const navigate = useNavigate();
@@ -31,6 +33,7 @@ const CreateForm: React.FC = () => {
     mutationFn: (variables: { payload: any; user: any }) => addBlog(variables),
     onSuccess: () => {
       navigate(`/${currentLang}/home`);
+      queryClient.invalidateQueries({ queryKey: ["blog-list"] });
     },
   });
   const onSubmit: SubmitHandler<BlogsForm> = (data) => {
